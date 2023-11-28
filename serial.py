@@ -22,7 +22,12 @@ class SerialGenerator:
         """constructor function to create a new SerialGenerator instance"""
 
         self.start = start
+        self.next_serial = start
 
     # TODO: make a .generate method
+    def generate(self):
+        """generate and return a new serial number"""
+        self.next_serial += 1
+        return self.next_serial
 
     # TODO: make a .reset method
