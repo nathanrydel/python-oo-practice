@@ -23,13 +23,21 @@ class SerialGenerator:
 
         self.start = start
         self.next_serial = start
+        self.count = 0
 
-    # FIXME: never generates the starting serial
     def generate(self):
         """generate and return a new serial number"""
-        self.next_serial += 1
-        return self.next_serial
+
+        if self.count == 0:
+            self.count += 1
+            return self.start
+        else:
+            self.count += 1
+            self.next_serial += 1
+            return self.next_serial
 
     def reset(self):
         """reset the serial generation to the starting value"""
+
         self.next_serial = self.start
+        self.count = 0
