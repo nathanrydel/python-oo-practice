@@ -22,23 +22,27 @@ class SerialGenerator:
         """constructor function to create a new SerialGenerator instance"""
 
         self.start = start
-        self.next_serial = start
-        self.count = 0
+        self.next = start
 
-    # TODO: may have a better way to implement this
+    def __repr__(self):
+        return f"<SerialGenerator start={self.start} next_serial={self.next}>"
+
+    # TODO: may have a better way to implement this - keep the start val group
+    # with other numbers - relationship between the start val and next
     def generate(self):
         """generate and return a new serial number"""
 
-        if self.count == 0:
-            self.count += 1
-            return self.start
-        else:
-            self.count += 1
-            self.next_serial += 1
-            return self.next_serial
+        self.next += 1
+        return self.next - 1
+        # if self.count == 0:
+        #     self.count += 1
+        #     return self.start
+        # else:
+        #     self.count += 1
+        #     self.next_serial += 1
+        #     return self.next_serial
 
     def reset(self):
         """reset the serial number to the starting value"""
 
-        self.next_serial = self.start
-        self.count = 0
+        self.next = self.start
