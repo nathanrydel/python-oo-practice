@@ -25,6 +25,7 @@ class SerialGenerator:
         self.next_serial = start
         self.count = 0
 
+    # TODO: may have a better way to implement this
     def generate(self):
         """generate and return a new serial number"""
 
