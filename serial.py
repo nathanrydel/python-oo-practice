@@ -38,7 +38,7 @@ class SerialGenerator:
             return self.next_serial
 
     def reset(self):
-        """reset the serial generation to the starting value"""
+        """reset the serial number to the starting value"""
 
         self.next_serial = self.start
         self.count = 0
