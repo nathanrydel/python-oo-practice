@@ -1,3 +1,6 @@
+from random import choice
+
+
 class WordFinder:
     """Word Finder: finds random words from a dictionary.
 
@@ -29,7 +32,6 @@ class WordFinder:
 
         print(f"{len(self.words)} words read")
 
-    # TODO: write a __repr__
     def __repr__(self):
         return f"<WordFinder path={self.path}>"
 
@@ -41,5 +43,5 @@ class WordFinder:
     # do not re-read the list of words each and should work with the
     # already-read-in words list
     def random(self):
-        """"""
-        ...
+        """Return a random word from self.words"""
+        return choice(self.words)
