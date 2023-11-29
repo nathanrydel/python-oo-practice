@@ -22,8 +22,8 @@ class WordFinder:
     """
 
     def __init__(self, path):
-        """Makes a list of the words contained in the file of the path and print
-        the number of words"""
+        """Makes a list of the words contained in the file of the path and
+        print the number of words"""
 
         file = open(path)
 
@@ -44,8 +44,20 @@ class WordFinder:
         return choice(self.words)
 
 
-class SpecialWordFinder:
-    # TODO: update docstring
-    '''Special Word Finder: find words in a file that have special characters'''
+class SpecialWordFinder(WordFinder):
+    
+    '''Special Word Finder: find words in a file, exclude blank lines
+        and words with special characters
+    '''
 
-    # TODO:
+    # def __init__(self, path):
+    #     super().__init__(self, path)
+
+    def __repr__(self):
+        return f"<SpecialWordFinder path={self.path}>"
+    
+    def getWords(self, file):
+        """ Return a list of all the words in a file,
+            exclude blank lines and words with special characters"""
+        return [word.strip() for word in file if not word.startswith("\\") and
+                not word.startswith("#")]

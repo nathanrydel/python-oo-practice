@@ -5,31 +5,38 @@ Ambrosia Beetle
 American Alligator
 American Alsatian
 American Bulldog
-American Bully
+# American Bully
 American Cocker Spaniel
-American Cockroach
+# American Cockroach
+
 American Coonhound
-American Dog Tick
+# American Dog Tick
+
 American Eel
 American Eskimo Dog
 American Foxhound
-American Hairless Terrier
+# American Hairless Terrier
 American Leopard Hound
 American Paddlefish
+
 American Pit Bull Terrier
 American Pugabull
+
 American Pygmy Goat
 American Robin
 Pterodactyl
 Pudelpointer
 Puertasaurus
-Puff Adder
+
+# Puff Adder
 Malayan Tiger
 Malchi
 Mallard
 Malteagle
 Snowy Owl
 Sockeye Salmon
-Soldier Beetle
+# Soldier Beetle
+
 Somali
+
 Turkey
