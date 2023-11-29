@@ -45,9 +45,9 @@ class WordFinder:
 
 
 class SpecialWordFinder(WordFinder):
-    
+
     '''Special Word Finder: find words in a file, exclude blank lines
-        and words with special characters
+        and lines starting with # characters
     '''
 
     # def __init__(self, path):
@@ -55,9 +55,11 @@ class SpecialWordFinder(WordFinder):
 
     def __repr__(self):
         return f"<SpecialWordFinder path={self.path}>"
-    
+
     def getWords(self, file):
         """ Return a list of all the words in a file,
-            exclude blank lines and words with special characters"""
-        return [word.strip() for word in file if not word.startswith("\\") and
-                not word.startswith("#")]
+            exclude blank lines and lines starting with # characters"""
+        return [word.strip() for word in file if not word.startswith("#")]
+
+        # if word != "" and
+        #         not word.startswith("#")]
