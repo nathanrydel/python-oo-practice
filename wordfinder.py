@@ -39,9 +39,13 @@ class WordFinder:
         """return a list of all the words in a file"""
         return [word.strip() for word in file]
 
-    # TODO: return a random word from self.words
-    # do not re-read the list of words each and should work with the
-    # already-read-in words list
     def random(self):
         """Return a random word from self.words"""
         return choice(self.words)
+
+
+class SpecialWordFinder:
+    # TODO: update docstring
+    '''Special Word Finder: find words in a file that have special characters'''
+
+    # TODO:
