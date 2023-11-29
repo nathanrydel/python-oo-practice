@@ -28,14 +28,14 @@ class WordFinder:
         file = open(path)
 
         # make a self.words = [word, word, word]
-        self.words = self.getWords(file)
+        self.words = self.get_words(file)
 
         print(f"{len(self.words)} words read")
 
     def __repr__(self):
         return f"<WordFinder path={self.path}>"
 
-    def getWords(self, file):
+    def get_words(self, file):
         """return a list of all the words in a file"""
         return [word.strip() for word in file]
 
@@ -56,10 +56,9 @@ class SpecialWordFinder(WordFinder):
     def __repr__(self):
         return f"<SpecialWordFinder path={self.path}>"
 
-    def getWords(self, file):
+    def get_words(self, file):
         """ Return a list of all the words in a file,
             exclude blank lines and lines starting with # characters"""
-        return [word.strip() for word in file if not word.startswith("#")]
 
-        # if word != "" and
-        #         not word.startswith("#")]
+        return [word for word in super().get_words(file)
+                if not word.startswith("#") and word != ""]
